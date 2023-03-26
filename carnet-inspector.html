@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Credencial Inspector</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+        <!--<link href="https://transportesde.com.ar/Content/FontsCredenciales/publicsans.css" rel="stylesheet" />-->
+
+        <style>
+            html, body {
+                font-size: 12px;
+                font-family: 'Roboto', sans-serif;
+            }
+
+            .container {
+                width: 100%;
+                padding-right: var(--bs-gutter-x, 0.75rem);
+                padding-left: var(--bs-gutter-x, 0.75rem);
+                margin-right: auto;
+                margin-left: auto;
+            }
+
+            .rounded {
+                border-radius: 0.75rem !important;
+            }
+
+            .card { 
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                min-width: 0;
+                word-wrap: break-word;
+                background-color: #fff;
+                background-clip: border-box;
+                border: 1px solid rgba(0, 0, 0, 0.125);
+                border-radius: 0.25rem;
+                padding: 20px 10px;
+            }
+
+            #inspectorFrente{
+                background: url(img/Frente-inspector.png) no-repeat;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+                height: 100%;
+                width: 100% ;
+                text-align: center;
+            }
+            
+            
+            #inspectorDorso{
+                background: url(img/Dorso-inspector.png) no-repeat;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+                height: 100%;
+                width: 100% ;
+                text-align: center;
+            }
+            .card-header {
+                padding: 0.5rem;
+                height: 40px;
+                margin-bottom: 0;
+                border-radius: 0.5rem 0.5rem 0 0 !important;
+                margin: -20px -10px;
+                text-align: center;
+                color: #fff;
+            }
+
+            .card-footer {
+
+                height: 50px;
+                margin-top: 10px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+                border-radius: 0.75rem 0.75rem 0 0 !important;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+            }
+
+            .card-header-dorso {
+                padding: 0.5rem 1rem;
+                height: 40px;
+                margin-bottom: 0;
+                border-radius: 0.75rem 0.75rem 0 0 !important;
+                margin: -20px -20px 20px -20px;
+                text-align: center;
+                color: #fff;
+            }
+
+            .img-fluid {
+                max-width: 100%;
+                height: auto;
+            }
+
+            .float-left {
+                float: left !important;
+            }
+
+            .float-right {
+                float: right !important;
+            }
+
+            .row {
+                --bs-gutter-x: 1.5rem;
+                --bs-gutter-y: 0;
+                display: flex;
+                flex-wrap: wrap;
+                margin-top: calc(var(--bs-gutter-y) * -1);
+                margin-right: calc(var(--bs-gutter-x) / -2);
+                margin-left: calc(var(--bs-gutter-x) / -2);
+ 
+            }
+
+            .d-flex {
+                display: flex !important;
+            }
+
+            .flex-fill {
+                flex: 1 1 auto !important;
+            }
+
+            .flex-shrink-0 {
+                flex-shrink: 0 !important;
+            }
+
+            .w-50 {
+                width: 50% !important;
+            }
+
+            .rounded {
+                border-radius: 0.5rem !important;
+            }
+            
+            .text-danger li{
+                font-size: 8px;
+            }
+
+            li {
+                font-size: 10px;
+                text-align: left;
+                line-height: 200%;
+                list-style: none;
+                padding: 0 ;
+            }
+
+            ul {
+                padding: 0;
+                margin: 0;
+            }
+
+            .mr-4 {
+                margin-right: 1.5rem !important;
+            }
+
+            .blue {
+                border: solid 1px #0b40d2;
+                box-sizing: border-box;
+                border-radius: 5px;
+                padding: 3px 15px 3px 15px;
+            }
+
+            .blue li{
+                color: #0b40d2;
+
+            }
+
+            .text-danger {
+                color: #dc3545 !important;
+            }
+
+            p {
+                font-size: 6.5px;
+                line-height: 11px;
+            }
+
+            .cuerpoCarnet-frente{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 30px;
+            }
+
+            .cuerpoCarnet-dorso{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 30px;
+            }
+
+            .flex-fill.row {
+                --bs-gutter-x: 1.5rem;
+                --bs-gutter-y: 0;
+                display: flex;
+                flex-wrap: wrap;
+                margin-top: calc(var(--bs-gutter-y) * -1);
+                margin-right: calc(var(--bs-gutter-x) / -2);
+                margin-left: calc(var(--bs-gutter-x) / -2);
+                width: 100%;
+                margin: 10px;
+            }
+
+            .infoInspector{
+                width: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .infoInspector ul ul {
+                margin-top: 15px;
+            }
+
+            .infoCarnet{
+                width: 60%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 10px;
+            }
+
+            .vertical-center{
+                display: flex;
+                justify-content: center;
+            }
+
+            .vertical-center li{
+                text-align: center;
+            }
+
+            .firma{
+                font-size: 8px;
+                text-align: left;
+                line-height: 1.5;
+                list-style: none;
+            }
+
+            .space-between{
+                display: flex;
+                justify-content: space-between;
+            }
+
+
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <!--CREDENCIAL FRENTE -->
+                <div class="card rounded mr-4" id="inspectorFrente" style="width: 6cm; height: 9.5cm;">
+                    <div class="card-header" style="background-color: #0b40d2;">
+                        <h2>INSPECTOR</h2>
+                    </div>
+                    <div class="cuerpoCarnet-frente">
+                        <div >
+                            <!--Colocar imagen de perfil acá <img src="" class="rounded" style="width: 101px; height: 120px;> y ocultar el div de abajo-->
+                            <div class="rounded" style="width: 101px; height: 120px; background-color: #E5E5E5"></div>
+                        </div>
+                        <div class="flex-fill row">
+                            <div class="infoInspector">
+                                <ul>
+                                    <li>
+                                        APELLIDO
+                                    </li>
+                                    <li style="margin-top: -5px;">
+                                        <strong>PEREZ</strong>
+                                    </li>
+                                    <li style="margin-top: 15px;">
+                                        DOCUMENTO
+                                    </li>
+                                    <li style="margin-top: -5px;">
+                                        <strong>DNI 34555888</strong>
+                                    </li> 
+
+                                    <ul class="blue">
+                                        <li>
+                                            <strong>Carnet</strong>
+                                        </li>
+        
+                                        <li style="margin-top: -5px;">
+                                            <strong>#5977</strong>
+                                        </li>
+                                    </ul>
+                                </ul>
+
+                               
+                            </div>
+
+                            <div class="infoInspector">
+                                <ul>
+                                    <li >
+                                        NOMBRE
+                                    </li>
+                                    <li style="margin-top: -5px;">
+                                        <strong>JUAN</strong>
+                                    </li> 
+                                    
+                                    <li style="margin-top: 15px;">
+                                        OTORGAMIENTO
+                                    </li>
+                                    <li style="margin-top: -5px;">
+                                        <strong>24/02/2021</strong>
+                                    </li> 
+
+                                    <ul class="text-danger" >
+                                        <li>
+                                            <strong>VTO</strong>
+                                        </li>
+        
+                                        <li style="margin-top: -5px;">
+                                            <strong>31/12/2021</strong>
+                                        </li> 
+                                    </ul>
+                                </ul>
+
+                                
+                            </div>
+
+                            
+                        </div>
+
+                    </div>
+
+                    <div class="card-footer" style="border: none; background-color: transparent;">
+                        <div><img class="img-fluid float-right" src="img/logo-horizontal.svg" alt="Logo dirección general de transporte" style="width: 105px;"></div>
+                        <div><img class="img-fluid float-left" src="https://transportesde.com.ar/Content/Logos/logo-gobierno.svg" alt="Logo Santiago del Estero" style="width: 105px;"></div>
+                    </div>
+                </div>
+
+                <!--CREDENCIAL DORSO -->
+                <div class="card rounded mr-4" id="inspectorDorso" style="width: 6cm; height: 9.5cm;">
+                  
+                    <div class="cuerpoCarnet-dorso">
+                        <div class="vertical-center">
+                            <ul>
+                                <!--CODIGO QR-->
+                                <li style="margin-top: 25px;"> 
+                                    <img alt="QR code" style="width: 100px; height: 100px;" src="data:image/png;base64,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" />       
+                                </li>
+                                <li>
+                                    ORGANISMO
+                                </li>
+                                <li style="margin-top: -5px;">
+                                    <strong>POLICÍA (SDE)</strong>
+                                </li>
+                                
+                                
+                            </ul>
+                        </div>
+
+                        <div class="flex-fill row space-between" style="margin-top: 75px; align-items: center;">
+                            <div style="width: 45%; margin-top: 5px;">                            
+                                  
+                                <img class="img-fluid" src="img/logo-horizontal.svg" alt="Logo dirección general de transporte" style="width: 116px; height: 32px">
+
+                            </div>
+
+                        <div style="width: 45%;">
+                            <ul >
+                                <li>
+                                    <hr/>
+                                </li>
+
+                                <li class="firma">
+                                    <strong>Director de Transporte, Santiago del Estero</strong>
+                                </li> 
+                            </ul>
+
+                        </div>                                   
+                            
+                            
+                        </div >
+                        <p style="margin-top: 10px">Esta credencial solo acredita la entidad del conductor de vehículos oficiales y debe ser acompañada con la licencia de conducir correspondiente a la categoría del vehículo que conduce. Caso contrario carece de valor.</p>
+                    </div>
+                </div>
+            </div>
+        </div><!--Fin container-->
+    </body>
+</html>
