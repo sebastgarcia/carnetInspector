@@ -239,8 +239,15 @@
             .vertical-center li{
                 text-align: center;
             }
+            
+            .firma div{
+                background-image: url(); /* Colocar aqui imagen de Firma*/
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
 
-            .firma{
+            .aclaracionFirma{
                 font-size: 8px;
                 text-align: left;
                 line-height: 1.5;
@@ -340,8 +347,8 @@
                             
                         </div>
 
-                        <div class="flex-fill row space-between" style="margin-top: 65px; align-items: center;">
-                            <div style="width: 45%; margin-top: 5px;">                            
+                        <div class="flex-fill row space-between" style="align-items: flex-end; margin-bottom: 5px;">
+                            <div style="width: 45%; display: flex;">                            
                                   
                                 <img class="img-fluid" src="img/logo-horizontal.svg" alt="Logo dirección general de transporte" style="width: 116px; height: 32px">
 
@@ -349,11 +356,15 @@
 
                         <div style="width: 45%;">
                             <ul >
+                                <li class="firma">
+                                    
+                                    <div style="width: 100%; height: 70px;"> </div>
+                                </li>
                                 <li>
-                                    <hr/>
+                                    <hr style="margin-top: 2px; margin-bottom: 0px;"/>
                                 </li>
 
-                                <li class="firma">
+                                <li class="aclaracionFirma">
                                     <strong>Director de Transporte, Santiago del Estero</strong>
                                 </li> 
                             </ul>
@@ -362,7 +373,7 @@
                             
                             
                         </div >
-                        <p style="margin-top: 0px">Esta credencial solo acredita la entidad del conductor de vehículos oficiales y debe ser acompañada con la licencia de conducir correspondiente a la categoría del vehículo que conduce. Caso contrario carece de valor.</p>
+                        <p >Esta credencial solo acredita la entidad del conductor de vehículos oficiales y debe ser acompañada con la licencia de conducir correspondiente a la categoría del vehículo que conduce. Caso contrario carece de valor.</p>
                     </div>
                 </div>
             </div>
