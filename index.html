@@ -73,7 +73,7 @@
             .card-footer {
 
                 height: 50px;
-                margin-top: 10px;
+                margin-top: 50px;
                 border-bottom: 1px solid rgba(0, 0, 0, 0.125);
                 border-radius: 0.75rem 0.75rem 0 0 !important;
                 display: flex;
@@ -142,7 +142,7 @@
 
             li {
                 font-size: 10px;
-                text-align: left;
+                text-align: center;
                 line-height: 200%;
                 list-style: none;
                 padding: 0 ;
@@ -158,15 +158,8 @@
             }
 
             .blue {
-                border: solid 1px #0b40d2;
-                box-sizing: border-box;
-                border-radius: 5px;
-                padding: 3px 15px 3px 15px;
-            }
-
-            .blue li{
                 color: #0b40d2;
-
+                
             }
 
             .text-danger {
@@ -205,15 +198,26 @@
             }
 
             .infoInspector{
-                width: 50%;
+                width: 100%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
             }
 
-            .infoInspector ul ul {
-                margin-top: 15px;
+            .infoInspectorDorso{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 10px;
             }
+
+             .infoInspectorDorso div{
+                width: 48%;
+                font-size: 9px;
+             }
+
+       
 
             .infoCarnet{
                 width: 60%;
@@ -270,67 +274,35 @@
                                     <li style="margin-top: -5px;">
                                         <strong>PEREZ</strong>
                                     </li>
-                                    <li style="margin-top: 15px;">
-                                        DOCUMENTO
-                                    </li>
-                                    <li style="margin-top: -5px;">
-                                        <strong>DNI 34555888</strong>
-                                    </li> 
-
-                                    <ul class="blue">
-                                        <li>
-                                            <strong>Carnet</strong>
-                                        </li>
-        
-                                        <li style="margin-top: -5px;">
-                                            <strong>#5977</strong>
-                                        </li>
-                                    </ul>
-                                </ul>
-
-                               
-                            </div>
-
-                            <div class="infoInspector">
-                                <ul>
                                     <li >
                                         NOMBRE
                                     </li>
                                     <li style="margin-top: -5px;">
                                         <strong>JUAN</strong>
                                     </li> 
-                                    
-                                    <li style="margin-top: 15px;">
-                                        OTORGAMIENTO
+                                    <li>
+                                        DOCUMENTO
                                     </li>
                                     <li style="margin-top: -5px;">
-                                        <strong>24/02/2021</strong>
+                                        <strong>DNI 34555888</strong>
                                     </li> 
 
-                                    <ul class="text-danger" >
-                                        <li>
-                                            <strong>VTO</strong>
-                                        </li>
-        
-                                        <li style="margin-top: -5px;">
-                                            <strong>31/12/2021</strong>
-                                        </li> 
-                                    </ul>
                                 </ul>
 
-                                
+                               
                             </div>
-
-                            
+                                    
                         </div>
 
+                            
                     </div>
 
-                    <div class="card-footer" style="border: none; background-color: transparent;">
-                        <div><img class="img-fluid float-right" src="img/logo-horizontal.svg" alt="Logo dirección general de transporte" style="width: 105px;"></div>
-                        <div><img class="img-fluid float-left" src="https://transportesde.com.ar/Content/Logos/logo-gobierno.svg" alt="Logo Santiago del Estero" style="width: 105px;"></div>
-                    </div>
+
+                <div class="card-footer" style="border: none; background-color: transparent;">
+                    <div><img class="img-fluid float-right" src="img/logo-horizontal.svg" alt="Logo dirección general de transporte" style="width: 105px;"></div>
+                    <div><img class="img-fluid float-left" src="https://transportesde.com.ar/Content/Logos/logo-gobierno.svg" alt="Logo Santiago del Estero" style="width: 105px;"></div>
                 </div>
+            </div>
 
                 <!--CREDENCIAL DORSO -->
                 <div class="card rounded mr-4" id="inspectorDorso" style="width: 6cm; height: 9.5cm;">
@@ -349,11 +321,22 @@
                                     <strong>POLICÍA (SDE)</strong>
                                 </li>
                                 
-                                
                             </ul>
                         </div>
 
-                        <div class="flex-fill row space-between" style="margin-top: 75px; align-items: center;">
+                        <div class="infoInspectorDorso ">
+                                <div class="blue">
+                                    Nro. Carnet: <strong>5977</strong>
+                                    
+                                </div>
+
+                                <div class="text-danger" >
+                                    Vencimiento: <strong>31/12/2021</strong>
+                                </div>
+                            
+                        </div>
+
+                        <div class="flex-fill row space-between" style="margin-top: 55px; align-items: center;">
                             <div style="width: 45%; margin-top: 5px;">                            
                                   
                                 <img class="img-fluid" src="img/logo-horizontal.svg" alt="Logo dirección general de transporte" style="width: 116px; height: 32px">
@@ -375,7 +358,7 @@
                             
                             
                         </div >
-                        <p style="margin-top: 10px">Esta credencial solo acredita la entidad del conductor de vehículos oficiales y debe ser acompañada con la licencia de conducir correspondiente a la categoría del vehículo que conduce. Caso contrario carece de valor.</p>
+                        <p style="margin-top: 0px">Esta credencial solo acredita la entidad del conductor de vehículos oficiales y debe ser acompañada con la licencia de conducir correspondiente a la categoría del vehículo que conduce. Caso contrario carece de valor.</p>
                     </div>
                 </div>
             </div>
